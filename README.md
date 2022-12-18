@@ -13,6 +13,7 @@ Image to Minecraft generator, IN PYTHON!
 ### Running the Script
 1. Make sure you have the modules already installed. 
 `pip install pillow pathlib` are the only two you need.
+2. Create new folders: `blocks/final/`, and `blocks/s/`
 2. Run `init.py` and wait for it to finish.
 You should see the folder `/final` and `/s` in `./blocks`
 Don't forget to remove everything in `blocks/final`, `blocks/s` and `./__pycache__` when picking a new version.
