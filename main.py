@@ -36,8 +36,9 @@ w,h = src_img.size
 texture_cache = {}
 
 textures = []
-for y in range(1,h):
-    for x in range(1,w):
+blockstoskip = input("How many blocks should it skip? (amount of pixels to skip to reduce file size and difficulty to build, e.x. `2` would skip 2 pixels)")
+for y in range(1,h,blockstoskip):
+    for x in range(1,w,blockstoskip):
         texture = closest_color(src_img.getpixel((x,y)))[1]
         texloaded = None
         keyabletext = texture.replace("_","").replace(".","")
