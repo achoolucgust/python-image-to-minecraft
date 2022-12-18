@@ -15,11 +15,14 @@ PREFIX = 'assets/minecraft/textures/block'
 out = pathlib.Path('blocks/')
 for archive_item in archive.namelist():
     if archive_item.startswith(PREFIX):
-        print(archive_item)
-        destpath = out.joinpath(archive_item[len(PREFIX):])
-        os.makedirs(destpath.parent, exist_ok=True)
-        with archive.open(archive_item) as source, open(destpath, 'wb') as dest:
-            shutil.copyfileobj(source, dest)
+        #try:
+            print(archive_item)
+            destpath = out.joinpath(archive_item[len(PREFIX):])
+            os.makedirs("blocks/s", exist_ok=True)
+            with archive.open(archive_item) as source:
+                shutil.copyfileobj(source, open(f"blocks/s/{destpath}","wb"))
+        #except:
+        #    print("couldn't get " + archive_item + " to copy")
 
 for item_name in os.listdir('blocks/s/'):
     item = pathlib.Path('blocks/s/' + item_name)
