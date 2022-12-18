@@ -18,4 +18,5 @@ Image to Minecraft generator, IN PYTHON!
 You should see the folder `/final` and `/s` in `./blocks`
 Don't forget to remove everything in `blocks/final`, `blocks/s` and `./__pycache__` when picking a new version.
 3. Now you can run `main.py`. The first prompt should ask you what the file name of your PNG/Image file is. Don't forget to include the file extension: `target.png`
+There's also an option that asks how many blocks to skip, For this one, it just skips x amount of pixels to reduce difficulty to build and file size. If you want full resolution (1 block for 1 pixel), you would enter `1`, but if you wanted to reduce the file size in half (1 block for 2 pixels), that would be `2`
 After waiting for that script to finish, you should now see final.png in the folder.
