@@ -4,8 +4,8 @@ Image to Minecraft generator, IN PYTHON!
 # How to use
 ## Setup
 ### Getting the version
-1. Find a version in your `.minecraft` folder. By default:
-`%appdata%/Roaming/.minecraft` 
+1. Find a version in your `.minecraft/versions` folder. By default:
+`%appdata%/Roaming/.minecraft/versions` 
 2. Find the `.jar` file in that folder.
 3. If that doesn't exist, you might be picking a snapshot, try using a version like `1.19.2` instead of `1.19.2-pre`
 4. Copy and Paste that file to the folder this script is in.
