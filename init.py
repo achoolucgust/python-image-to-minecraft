@@ -26,7 +26,7 @@ for archive_item in archive.namelist():
 
 for item_name in os.listdir('blocks/s/'):
     item = pathlib.Path('blocks/s/' + item_name)
-    if item_name.endswith(".png"): 
+    if item_name.endswith(".png") and not ("debug" in item_name): 
         img = Image.open(item)
         w,h = img.size
         if w == h:
