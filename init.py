@@ -1,6 +1,7 @@
 import zipfile
 import pathlib
 import os
+import sys
 import shutil
 from PIL import Image, ImageStat
 
@@ -16,21 +17,21 @@ out = pathlib.Path('blocks/')
 for archive_item in archive.namelist():
     if archive_item.startswith(PREFIX):
         #try:
-            print(archive_item)
+            sys.stdout.write("\r" + archive_item)
             destpath = out.joinpath(archive_item[len(PREFIX):])
             os.makedirs("blocks/s", exist_ok=True)
             with archive.open(archive_item) as source:
                 shutil.copyfileobj(source, open(f"blocks/s/{destpath}","wb"))
         #except:
         #    print("couldn't get " + archive_item + " to copy")
-
+print("\nFinished! Getting average colors...")
 for item_name in os.listdir('blocks/s/'):
     item = pathlib.Path('blocks/s/' + item_name)
     if item_name.endswith(".png") and not ("debug" in item_name): 
         img = Image.open(item)
         w,h = img.size
         if w == h:
-            print("-=" + item_name)
+            sys.stdout.write("\r" + archive_item)
             av = ImageStat.Stat(img).median
             if len(av) > 3:
                 notignored = av[3] > 150
