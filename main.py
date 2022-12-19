@@ -1,6 +1,7 @@
 from all_of_the_blocks_list_dont_touch import all as blockslist
 from PIL import Image, ImageStat
 from math import sqrt
+import sys
 
 def image_grid(imgs, rows, cols):
     if len(imgs) == rows*cols:
@@ -11,6 +12,7 @@ def image_grid(imgs, rows, cols):
     grid_w, grid_h = grid.size
     i = 0
     for img in imgs:
+        sys.stdout.write(f"\r{i%cols*w}-{i//cols*h}        \t        \t")
         grid.paste(img, box=(i%cols*w, i//cols*h))
         i+= 1
     return grid
@@ -36,20 +38,25 @@ w,h = src_img.size
 texture_cache = {}
 
 textures = []
-blockstoskip = input("How many blocks should it skip? (amount of pixels to skip to reduce file size and difficulty to build, e.x. `2` would skip 2 pixels)\n")
-for y in range(0,h,int(blockstoskip)):
-    for x in range(0,w,int(blockstoskip)):
+#blockstoskip = input("How many blocks should it skip? (amount of pixels to skip to reduce file size and difficulty to build, e.x. `2` would skip 2 pixels)\n")
+print("Finding correct textures for colors...\n\n")
+for y in range(0,h):
+    for x in range(0,w):
         texture = closest_color(src_img.getpixel((x,y)))[1]
         texloaded = None
         keyabletext = texture.replace("_","").replace(".","")
         try:
             texture_cache[keyabletext]
         except:
+            sys.stdout.write(f"\rCache of {keyabletext} for {x}-{y} doesn't exist! Creating...")
             texture_cache[keyabletext] = Image.open("blocks/s/" + texture)
             texloaded = texture_cache[keyabletext]
         else:
+            sys.stdout.write(f"\rCache of {keyabletext} for {x}-{y} exists!        \t        \t")
             texloaded = texture_cache[keyabletext]
         textures.append(texloaded)
-
+print("\n\nStitching textures together...\n")
 
 image_grid(textures,h+1,w).save("final.png")
+
+input("\n\nFinished, [ENTER] to close\n")
