@@ -49,4 +49,6 @@ Don't forget to remove everything in `blocks/final`, `blocks/s` and `./__pycache
 There's also an option that asks how many blocks to skip, For this one, it just skips x amount of pixels to reduce difficulty to build and file size. If you want full resolution (1 block for 1 pixel), you would enter `1`, but if you wanted to reduce the file size in half (1 block for 2 pixels), that would be `2`
 After waiting for that script to finish, you should now see final.png in the folder.
 
+This image is with 10 skipped blocks
+
 ![final.png](https://cdn.discordapp.com/attachments/971690756047765534/1054851102903898172/image.png)
