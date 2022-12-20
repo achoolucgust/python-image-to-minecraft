@@ -33,12 +33,14 @@ def rest():
     img_name = input("Enter filename with file extension [png, jpeg, jpg] like 'discord.png':\n")
 
     src_img = Image.open(img_name)
+    blocks_to_skip = int(input("How many blocks should it skip? (amount of pixels to skip to reduce file size and difficulty to build, e.x. `2` would skip 2 pixels)\n"))
+    w,h = src_img.size
+    src_img.thumbnail((int(w/blocks_to_skip),int(h/blocks_to_skip)))
     w,h = src_img.size
 
     texture_cache = {}
 
     textures = []
-    #blockstoskip = input("How many blocks should it skip? (amount of pixels to skip to reduce file size and difficulty to build, e.x. `2` would skip 2 pixels)\n")
     print("Finding correct textures for colors...\n\n")
     for y in range(0,h):
         for x in range(0,w):
