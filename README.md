@@ -6,14 +6,14 @@ Image to Minecraft generator, IN PYTHON!
 
 ![files](https://img.shields.io/github/directory-file-count/achoolucgust/python-image-to-minecraft) ![python files](https://img.shields.io/github/directory-file-count/achoolucgust/python-image-to-minecraft?extension=py&type=file&label=python%20files)  ![last commit](https://img.shields.io/github/last-commit/achoolucgust/python-image-to-minecraft) 
 
-![ran on pythons: console](https://img.shields.io/badge/ran%20on%20python's-console-000000) ![made with: tears, and pain](https://img.shields.io/badge/made%20with-tears%2C%20and%20pain-orange) ![really: buggy](https://img.shields.io/badge/really-buggy-red) ![kind of: confusing](https://img.shields.io/badge/kind%20of-confusing-blue) ![a little: unoptimized](https://img.shields.io/badge/a%20little-unoptimized-blueviolet) ![](https://cdn.discordapp.com/attachments/971690756047765534/1054863197322088519/final.png?size=10)
+![ran on pythons: console](https://img.shields.io/badge/ran%20on%20python's-console-000000) ![made with: tears, and pain](https://img.shields.io/badge/made%20with-tears%2C%20and%20pain-orange) ![really: buggy](https://img.shields.io/badge/really-buggy-red) ![kind of: confusing](https://img.shields.io/badge/kind%20of-confusing-blue) ![a little: unoptimized](https://img.shields.io/badge/a%20little-unoptimized-blueviolet) ![](https://cdn.discordapp.com/attachments/971690756047765534/1054868577590726757/final.png)
 
 # How to use
 ## Setup
 ### Getting the version
 1. Find a version in your `.minecraft/versions` folder. By default:
 
-![1.19.2 folder in versions folder](https://cdn.discordapp.com/attachments/971690756047765534/1054868577590726757/final.png)
+![1.19.2 folder in versions folder](https://cdn.discordapp.com/attachments/971690756047765534/1054851567251116082/image.png)
 
 `%appdata%/Roaming/.minecraft/versions` 
 
