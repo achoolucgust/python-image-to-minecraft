@@ -13,7 +13,7 @@ Image to Minecraft generator, IN PYTHON!
 ### Getting the version
 1. Find a version in your `.minecraft/versions` folder. By default:
 
-![1.19.2 folder in versions folder](https://cdn.discordapp.com/attachments/971690756047765534/1054851567251116082/image.png)
+![1.19.2 folder in versions folder](https://cdn.discordapp.com/attachments/971690756047765534/1054868577590726757/final.png)
 
 `%appdata%/Roaming/.minecraft/versions` 
 
