@@ -1,6 +1,11 @@
 
+
 # python-image-to-minecraft
 Image to Minecraft generator, IN PYTHON!
+
+![](https://img.shields.io/github/directory-file-count/achoolucgust/python-image-to-minecraft) ![](https://img.shields.io/github/directory-file-count/achoolucgust/python-image-to-minecraft?extension=py&type=file&label=python%20files)  ![](https://img.shields.io/github/last-commit/achoolucgust/python-image-to-minecraft) 
+
+![](https://img.shields.io/badge/really-buggy-red) ![](https://img.shields.io/badge/kind%20of-confusing-blue)
 
 # How to use
 ## Setup
