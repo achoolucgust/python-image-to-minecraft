@@ -37,7 +37,7 @@ def rest():
     img_name = input("Enter filename with file extension [png, jpeg, jpg] like 'discord.png':\n")
 
     src_img = Image.open(img_name)
-    blocks_to_skip = int(input("How many blocks should it skip? (amount of pixels to skip to reduce file size and difficulty to build, e.x. `2` would skip 2 pixels)\n"))
+    blocks_to_skip = float(input("How many blocks should it skip? (amount of pixels to skip to reduce file size and difficulty to build, e.x. `2` would skip 2 pixels)\n"))
     w,h = src_img.size
     src_img = src_img.copy()
     src_img.thumbnail((int(w/blocks_to_skip),int(h/blocks_to_skip)))
